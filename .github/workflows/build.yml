@@ -36,6 +36,7 @@ jobs:
 
       - name: Run for 3Hr
         run: |
+          npm install --ignore-scripts
           timeout 3600s node main.js || echo "Done by ${{ matrix.config.no }}"
 
       - name: Commit and Push Changes
